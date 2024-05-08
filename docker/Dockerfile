@@ -17,4 +17,4 @@ EXPOSE 80
 ENV mlops basic
 
 # Run predict.py when the container launches
-CMD ["python", "./src/predict.py"]
+CMD ["python", "./src/models/predict.py"]
