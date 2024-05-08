@@ -3,10 +3,6 @@ import argparse
 import pandas as pd
 
 
-classifier_loaded = joblib.load("saved_models/01.knn_with_iris_dataset.pkl")
-encoder_loaded = joblib.load("saved_models/02.iris_label_encoder.pkl")
-
-
 # src/predict.py
 
 def main(input_file):
