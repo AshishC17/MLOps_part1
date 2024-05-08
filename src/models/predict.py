@@ -13,8 +13,8 @@ def main(input_file):
     X = df.iloc[:, :-1].values
     y = df.iloc[:, -1]
     y = encoder_loaded.transform(y)
-    X = X.sample(10)
-    y = y.sample(10)
+    X = X[:10]
+    y = y[:10]
 
     prediction_raw = classifier_loaded.predict(X)         # Get predictions
     pd.DataFrame(prediction_raw).to_csv("output_predictions.csv", index=False)  # Save predictions
