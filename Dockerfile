@@ -3,11 +3,11 @@ COPY requirements.txt requirements.txt
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 WORKDIR /usr/app/src
-COPY train.py ./
-EXPOSE 3030
+COPY . .
+EXPOSE 4000
 
 # Define environment variable
 ENV MLOPS basic
 
 # Run predict.py when the container launches
-CMD ["python", "train.py"]
+CMD ["python", "app.py"]
